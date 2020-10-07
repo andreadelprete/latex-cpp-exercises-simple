@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Esercizi Blocco 1} % Title of the assignment
+
+\author{Luca Oliveri\\ \texttt{luca.olivieri-1@unitn.it}} % Author name and email address
+
+\date{Università di Trento --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+% \section*{Introduzione} % Unnumbered section
+% Questa serie di file di esercizi verrà pubblicata mano a meno che progrediremo nel corso. Questi esercizi non saranno né valutati né corretti. Nonostante ciò, sono da considerarsi in preparazione per l'esame.
+
+
+% \begin{info} 
+% 	Molti degli esercizi sono proposti dal sito \href{https://www.codestepbystep.com/problem/list/cpp}{\texttt{CodeStepByStep}}. Previa registrazione, il sito propone un box dove si può direttamente scrivere il codice e poi eseguire un test automatico della sua correttezza. Il mio consiglio è, quando possibile, quello di sviluppare su VSCode sfruttando il sistema dei sotto-progetti, uno per esercizio. Copiare poi il codice su \texttt{CodeStepByStep} per verificarne la correttezza solo alla fine. 
+% \end{info}
+
+
+\setcounter{section}{1}
+
+%------------------------------------------------
+
+\subsection{} 
+Scrivere un programma completo che chiede all'utente tre numeri interi e ne calcola il prodotto. 
+
+\begin{warn}[Occhio:]Se invece venisse chiesto di chiedere dieci numeri?
+\end{warn}
+
+
+\subsection{}
+Scrivere un programma che chide all'utente due numeri e ne calcola somma, prodotto, differenza, divisione e resto.
+
+
+\subsection{}
+Scrivere un programma che scrive i numeri da 1 a 4 sulla stessa linea. Ripetere tre volte lo stesso output utilizzando i seguenti metodi.
+\begin{itemize}
+	\item Usando una sola volta \texttt{cout} e separando gli spazi dai numeri Es: \texttt{"3"} e \texttt{" "}.
+	\item Usando una sola volta \texttt{cout} mantenendo gli spazi insieme ai numeri Es: \texttt{"3 "}.
+	\item Usando quattro \texttt{cout} separati.
+\end{itemize}
+
+
+\vspace{-10pt}
+\begin{warn}[Estensione:]
+	L'utente inserisce un numero e vengono stampati i numeri da 1 al numero inserito. Provate a capire quale tra le prime due opzioni è più efficiente.
+\end{warn}
+
+\subsection{}
+Scrivere un programma che chide all'utente di inserire due interi, e poi scrive il numero più grande seguito dalla string \texttt{" is larger"}. Se i due numeri sono uguali, scrivi il messaggio \texttt{" These numbers are equal"}.
+
+\subsection{}
+Scrivere un programma che legge tre numeri e calcola la somma, la media, il prodotto, il più grande e il più piccolo.
+
+\subsection{}
+Scrivere un programma che si fa inserire la lunghezza del raggio e calcola il diametro, circonferenza e area. Ci sono diversi modi nell'ottenere la costante $\pi$, tra cui scriversela a mano. Fare i calcoli direttamente nei comandi di \texttt{cout}.
+
+\subsection{}
+Scrivere un programma che prende un intero e verifica se questo è pari o dispari e scrive qualcosa a proposito.
+
+\subsection{}
+Scrivere un programma che prende due numeri interi e determina se il primo è un multiplo del secondo.
+
+\subsection{}
+Scrivere un programma che stampa la tabella ASCII in questo formato, limitandosi alle lettere maiuscole, minuscole e le dieci cifre:
+
+\texttt{CHAR: A ASCII: 65}
+
+\texttt{CHAR: B ASCII: 66}
+
+\texttt{CHAR: C ASCII: 67}
+
+
+\begin{info}
+	Dato un intero \texttt{i}, il su corrispondente carattere ASCII può essere ricavato tramite l'operatore di cast, quindi:
+	\texttt{cout {<}< (char) 65} stamperà \texttt{A}. 
+	Inoltre ricordare che invece scrivendo \texttt{int i = 'A'} il valore di \texttt{i} sarà 65. 
+\end{info}
+
+
+\section*{Esercizi \texttt{CodeStepByStep}}
+\begin{itemize}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/ifelse/ifElseMystery1}{ifElseMystery1}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/ifelse/ifElseMystery2}{ifElseMystery2}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/ifelse/percentageGrade}{percentageGrade}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/basics/evenAverage}{evenAverage}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/basics/fixErrors}{fixErrors}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/basics/numberSquare}{numberSquare}
+\end{itemize}
+
+
+
+\end{document}
