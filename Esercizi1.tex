@@ -43,8 +43,8 @@
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-% \section*{Introduzione} % Unnumbered section
-% Questa serie di file di esercizi verrà pubblicata mano a meno che progrediremo nel corso. Questi esercizi non saranno né valutati né corretti. Nonostante ciò, sono da considerarsi in preparazione per l'esame.
+\section*{Introduzione} % Unnumbered section
+Abbreviamo "scrivere un programma" con SUP.
 
 
 % \begin{info} 
@@ -57,59 +57,50 @@
 %------------------------------------------------
 
 \subsection{} 
-Scrivere un programma completo che chiede all'utente tre numeri interi e ne calcola il prodotto. 
-
-\begin{warn}[Occhio:]Se invece venisse chiesto di chiedere dieci numeri?
-\end{warn}
-
+SUP che si fa dare due numeri interi $x$ e $y$ e calcola $x^y$. Fare due versioni, una che per il loop interno usa \texttt{for}, l'altra che usa \texttt{while}. Non usare \texttt{pow()}.
 
 \subsection{}
-Scrivere un programma che chide all'utente due numeri e ne calcola somma, prodotto, differenza, divisione e resto.
-
+Trovare il numero più grande in un array è un problema ricorrente in programmazione. SUP che dati 10 numeri, inseriti dall'utente, restituisce il numero più grande.
 
 \subsection{}
-Scrivere un programma che scrive i numeri da 1 a 4 sulla stessa linea. Ripetere tre volte lo stesso output utilizzando i seguenti metodi.
-\begin{itemize}
-	\item Usando una sola volta \texttt{cout} e separando gli spazi dai numeri Es: \texttt{"3"} e \texttt{" "}.
-	\item Usando una sola volta \texttt{cout} mantenendo gli spazi insieme ai numeri Es: \texttt{"3 "}.
-	\item Usando quattro \texttt{cout} separati.
-\end{itemize}
+Modificare il programma precedente in modo che trovi i due numeri più grandi.
 
-
+\subsection{}
+Una parola, frase o numero palindromo ha la proprietà che può essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo è palindromo o meno.
+\begin{info} 
+	Usare l'operatore divisione e resto per dividere il numero in cifre. Anche questa è un'operazione che capita spesso di fare in programmazione.
+\end{info}
 \vspace{-10pt}
-\begin{warn}[Estensione:]
-	L'utente inserisce un numero e vengono stampati i numeri da 1 al numero inserito. Provate a capire quale tra le prime due opzioni è più efficiente.
+\begin{warn}[Estensione non banale:]
+	L'utente inserisce un numero di lunghezza a suo piacimento. 
 \end{warn}
 
 \subsection{}
-Scrivere un programma che chide all'utente di inserire due interi, e poi scrive il numero più grande seguito dalla string \texttt{" is larger"}. Se i due numeri sono uguali, scrivi il messaggio \texttt{" These numbers are equal"}.
+SUP che stampa senza sosta i multipli di due. Quindi 2, 4, 8, 16, eccetera. Il loop è infinito. Cosa succede e perché?
 
 \subsection{}
-Scrivere un programma che legge tre numeri e calcola la somma, la media, il prodotto, il più grande e il più piccolo.
+Il fattoriale di un numero non-negativo $n$ si scrive $n!$. Ed è definito come segue:
+$$n! = n \cdot (n - 1) \cdot (n - 2) \cdot (n - 3) \cdot \ldots \cdot 1$$
+Se $n==0$ allora $0! = 1$.
+Per esempio $$5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$$
+SUP che legge un numero non-negativo e calcolarne il fattoriale. Fino a che numero si ottengono risultati corretti? Controllare che l'utente inserisca un numero adeguato e in caso contrario scrivere un messaggio e terminare l'esecuzione. 
 
 \subsection{}
-Scrivere un programma che si fa inserire la lunghezza del raggio e calcola il diametro, circonferenza e area. Ci sono diversi modi nell'ottenere la costante $\pi$, tra cui scriversela a mano. Fare i calcoli direttamente nei comandi di \texttt{cout}.
+SUP che prende in ingresso un intero e calcola il valore della costante di eulero $e$ con la seguente formula:
+$$e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots$$
+Usare il valore in ingresso per quanto a fondo esplorare la progressione. Confrontare il valore con la funzione \texttt{exp()} presente in \texttt{math.h} con argomento 1. Se avete dubbi sulle funzioni di libreria, Google è \href{http://www.cplusplus.com/reference/cmath/exp/}{tuo} \href{https://www.geeksforgeeks.org/exp-function-cpp/}{amico}.
 
 \subsection{}
-Scrivere un programma che prende un intero e verifica se questo è pari o dispari e scrive qualcosa a proposito.
+SUP che legge 10 numeri dall'utente e ne calcola la somma. Fermarsi a leggere numeri quando l'utente inserisce tutti i 10 numeri oppure quando inserisce 0.
 
 \subsection{}
-Scrivere un programma che prende due numeri interi e determina se il primo è un multiplo del secondo.
+SUP che prende 10 numeri e calcola la somma solamente dei numeri pari.
 
 \subsection{}
-Scrivere un programma che stampa la tabella ASCII in questo formato, limitandosi alle lettere maiuscole, minuscole e le dieci cifre:
+SUP che calcola la media dei voti di un esame. Il programma si fa dare prima il numero totale di studenti, poi i voti. Supporre un limite massimo di studenti. 
 
-\texttt{CHAR: A ASCII: 65}
-
-\texttt{CHAR: B ASCII: 66}
-
-\texttt{CHAR: C ASCII: 67}
-
-
-\begin{info}
-	Dato un intero \texttt{i}, il su corrispondente carattere ASCII può essere ricavato tramite l'operatore di cast, quindi:
-	\texttt{cout {<}< (char) 65} stamperà \texttt{A}. 
-	Inoltre ricordare che invece scrivendo \texttt{int i = 'A'} il valore di \texttt{i} sarà 65. 
+\begin{info} 
+	Usare l'operatore divisione e resto per dividere il numero in cifre. Anche questa è un'operazione che capita spesso di fare in programmazione.
 \end{info}
 
 
