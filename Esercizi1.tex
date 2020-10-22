@@ -44,12 +44,7 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Introduzione} % Unnumbered section
-Abbreviamo "scrivere un programma" con SUP.
-
-
-% \begin{info} 
-% 	Molti degli esercizi sono proposti dal sito \href{https://www.codestepbystep.com/problem/list/cpp}{\texttt{CodeStepByStep}}. Previa registrazione, il sito propone un box dove si può direttamente scrivere il codice e poi eseguire un test automatico della sua correttezza. Il mio consiglio è, quando possibile, quello di sviluppare su VSCode sfruttando il sistema dei sotto-progetti, uno per esercizio. Copiare poi il codice su \texttt{CodeStepByStep} per verificarne la correttezza solo alla fine. 
-% \end{info}
+Abbreviamo "scrivere un programma" con SUP. Questo blocco prevede l'uso di funzioni. Non è esplicitamente indicato quali porzioni di codice sono da delegare ad una funzione.
 
 
 \setcounter{section}{1}
@@ -57,23 +52,15 @@ Abbreviamo "scrivere un programma" con SUP.
 %------------------------------------------------
 
 \subsection{} 
-SUP che si fa dare due numeri interi $x$ e $y$ e calcola $x^y$. Fare due versioni, una che per il loop interno usa \texttt{for}, l'altra che usa \texttt{while}. Non usare \texttt{pow()}.
+SUP che si fa dare due numeri interi $x$ e $y$ e calcola $x^y$. Fare due versioni, una che per il loop interno usa \texttt{for}, l'altra che usa \texttt{while}. Non usare \texttt{pow()}, questo perché se andate a leggere la documentazione, vedrete che prende in ingresso due \texttt{double}, significa quindi che al suo interno non compie un elevamento a potenza tra interi, ma tra numeri reali. Pur permettendoci di ottenere lo stesso risultato, questo implica che l'esecuzione sarà ben più lenta e inoltre potremmo imbatterci in errori numerici.
 
-\subsection{}
-Trovare il numero più grande in un array è un problema ricorrente in programmazione. SUP che dati 10 numeri, inseriti dall'utente, restituisce il numero più grande.
-
-\subsection{}
-Modificare il programma precedente in modo che trovi i due numeri più grandi.
 
 \subsection{}
 Una parola, frase o numero palindromo ha la proprietà che può essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo è palindromo o meno.
 \begin{info} 
 	Usare l'operatore divisione e resto per dividere il numero in cifre. Anche questa è un'operazione che capita spesso di fare in programmazione.
 \end{info}
-\vspace{-10pt}
-\begin{warn}[Estensione non banale:]
-	L'utente inserisce un numero di lunghezza a suo piacimento. 
-\end{warn}
+
 
 \subsection{}
 SUP che stampa senza sosta i multipli di due. Quindi 2, 4, 8, 16, eccetera. Il loop è infinito. Cosa succede e perché?
@@ -84,24 +71,22 @@ $$n! = n \cdot (n - 1) \cdot (n - 2) \cdot (n - 3) \cdot \ldots \cdot 1$$
 Se $n==0$ allora $0! = 1$.
 Per esempio $$5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$$
 SUP che legge un numero non-negativo e calcolarne il fattoriale. Fino a che numero si ottengono risultati corretti? Controllare che l'utente inserisca un numero adeguato e in caso contrario scrivere un messaggio e terminare l'esecuzione. 
+\begin{info} 
+	\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursion_versus_iteration}{È dimostrato} che algoritmi scritti usando la ricorsione possono essere riscritti usando cicli iterativi classici (\texttt{while}/\texttt{for}) e viceversa. Provare a scrivere entrambe le soluzioni.
+\end{info}
+
 
 \subsection{}
 SUP che prende in ingresso un intero e calcola il valore della costante di eulero $e$ con la seguente formula:
 $$e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots$$
-Usare il valore in ingresso per quanto a fondo esplorare la progressione. Confrontare il valore con la funzione \texttt{exp()} presente in \texttt{math.h} con argomento 1. Se avete dubbi sulle funzioni di libreria, Google è \href{http://www.cplusplus.com/reference/cmath/exp/}{tuo} \href{https://www.geeksforgeeks.org/exp-function-cpp/}{amico}.
+Usare il valore in ingresso per quanto a fondo esplorare la progressione. Confrontare il valore con la funzione \texttt{exp()} presente in \texttt{math.h} con argomento 1. Se avete dubbi sulle funzioni di libreria, Google è \href{http://www.cplusplus.com/reference/cmath/exp/}{tuo} \href{https://www.geeksforgeeks.org/exp-function-cpp/}{amico}. Quante iterazioni sono necessarie per far scendere l'errore sotto ai millesimi?
 
 \subsection{}
-SUP che legge 10 numeri dall'utente e ne calcola la somma. Fermarsi a leggere numeri quando l'utente inserisce tutti i 10 numeri oppure quando inserisce 0.
+Il campo della crittografia ha lo scopo di codificare i dati rendendo difficile, in
 
-\subsection{}
-SUP che prende 10 numeri e calcola la somma solamente dei numeri pari.
 
-\subsection{}
-SUP che calcola la media dei voti di un esame. Il programma si fa dare prima il numero totale di studenti, poi i voti. Supporre un limite massimo di studenti. 
 
-\begin{info} 
-	Usare l'operatore divisione e resto per dividere il numero in cifre. Anche questa è un'operazione che capita spesso di fare in programmazione.
-\end{info}
+
 
 
 \section*{Esercizi \texttt{CodeStepByStep}}
