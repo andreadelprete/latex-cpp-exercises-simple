@@ -56,11 +56,19 @@ SUP che si fa dare due numeri interi $x$ e $y$ e calcola $x^y$. Fare due version
 
 
 \subsection{}
-Una parola, frase o numero palindromo ha la proprietà che può essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo è palindromo o meno.
+SUP che dato un numero intero e un numero indice, individua la cifra alla posizione indice del primo numero inserito. Esempio: 39842, indice 2 (decine) = 4 decine. Farsi stampare solo la cifra, non serve il nome posizionale (decine, centinaia, ecc).
 \begin{info} 
-	Usare l'operatore divisione e resto per dividere il numero in cifre. Anche questa è un'operazione che capita spesso di fare in programmazione.
+	Per scomporre il numero in cifre, usare l'operatore divisione e resto con le potenze di 10. Questa è un'operazione che capita spesso in programmazione. Svolgere prima l'esercizio precedente: si può riutilizzare del codice.
 \end{info}
 
+\subsection{}
+Una parola, frase o numero palindromo ha la proprietà che può essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo è palindromo o meno.
+\begin{info} 
+	Si consiglia di svolgere prima i due esercizi precedenti.
+\end{info}
+\begin{warn} [Estensione:]
+	Il numero in ingresso non ha lunghezza fissata a 5 ma ha lunghezza variabile. Con questa estensione diventa l'esercizio algoritmicamente più complesso di questo Blocco.
+\end{warn}
 
 \subsection{}
 SUP che stampa senza sosta i multipli di due. Quindi 2, 4, 8, 16, eccetera. Il loop è infinito. Cosa succede e perché?
@@ -80,13 +88,6 @@ SUP che legge un numero non-negativo e calcolarne il fattoriale. Fino a che nume
 SUP che prende in ingresso un intero e calcola il valore della costante di eulero $e$ con la seguente formula:
 $$e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots$$
 Usare il valore in ingresso per quanto a fondo esplorare la progressione. Confrontare il valore con la funzione \texttt{exp()} presente in \texttt{math.h} con argomento 1. Se avete dubbi sulle funzioni di libreria, Google è \href{http://www.cplusplus.com/reference/cmath/exp/}{tuo} \href{https://www.geeksforgeeks.org/exp-function-cpp/}{amico}. Quante iterazioni sono necessarie per far scendere l'errore sotto ai millesimi?
-
-\subsection{}
-Il campo della crittografia ha lo scopo di codificare i dati rendendo difficile, in
-
-
-
-
 
 
 \section*{Esercizi \texttt{CodeStepByStep}}
