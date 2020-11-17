@@ -1,0 +1,90 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Lachaise Assignment
+% LaTeX Template
+% Version 1.0 (26/6/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Marion Lachaise & François Févotte
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Esercizi Blocco 3} % Title of the assignment
+
+\author{Luca Oliveri\\ \texttt{luca.olivieri-1@unitn.it}} % Author name and email address
+
+\date{Università di Trento --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section*{Introduzione} % Unnumbered section
+
+\setcounter{section}{3}
+Focus principale su manipolazione di stringhe. Usare quando possibile le funzioni della \href{http://www.cplusplus.com/reference/cstring/}{\texttt{cstring}} e \href{http://www.cplusplus.com/reference/cctype/}{\texttt{ctype}}. Essendo che alcuni di questi esercizi richiedono di essere risolti dividendo il problema principale in più problemi semplici e puntuali, dedicare tempo ad organizzare il codice in modo adeguato.
+
+%------------------------------------------------
+
+\subsection{}
+SUP che prende una stringa del tipo \texttt{"923D"} ed estrae il numero, convertendolo in \texttt{int}. La lettera D è sempre alla fine della stringa. Verificare il funzionamento anche con numeri negativi. Esistono \href{https://www.geeksforgeeks.org/converting-strings-numbers-cc/}{diversi modi} per fare questa conversione, ma probabilmente la soluzione più semplice è usare il metodo nativo C++, che è la prima soluzione proposta dal sito.
+
+\subsection{}
+SUP che prende una stringa dall'utente che può essere anche una frase, comprensiva quindi di spazi e punteggiatura. Il programma ristampa la stessa stringa al contrario.  
+
+\subsection{}
+Localizzare in una stringa tutte le occorrenze di un determinato carattere usando la funzione di libreria \texttt{strchr}. Le stringhe in ingresso sono composte di sole lettere minuscole e spazi. Il programma stampa la stessa stringa in ingresso con le occorrenze trovate convertite a lettere maiuscole (cercare funzione di libreria per fare ciò). Stampa inoltre un conteggio delle occorrenze.
+
+\subsection{}
+SUP che usa l'abilità acquisita nell'esercizio precedente di fare \textit{parsing} di stringa e svolge una funzionalità programmabile. Il programma prende in input una stringa di valori di temperatura del tipo \texttt{"20C@34F@12F@23C"} e converte questi in gradi Kelvin. 
+
+% Stampare due tabelle distinte per conversioni Celsius e Fahrenheit.
+
+\subsection{}
+SUP che data una stringa in input calcola le occorrenze di ogni carattere. Risolvere il problema usando un unico array per contare le occorrenze. Stampare il risultato in tabella, con possibili interessanti statistiche a vostra discrezione. Considerare solo lettere dell'alfabeto, maiuscole e minuscole fanno parte dello stesso conteggio. Scartare tutto ciò che non è una lettera, per semplicità si scartano anche i caratteri della tabella ASCII estesa come le lettere accentate.
+\begin{info}
+	Tenere a mente come sono rappresentate le lettere nella tabella ASCII. È possibile indicizzare l'array dove incrementiamo mano a mano il conteggio usando direttamente la lettera sotto esame e applicando un offset. Ad esempio la lettera D, quarta nell'alfabeto quindi avente indice 3, ha valore ASCII 44, oppure anche 64 nel nostro caso. Sottraendo un offset di 41 o di 61 rispettivamente, troviamo il nostro indice di valore 3.
+\end{info}
+\begin{warn} [Estensione avanzata:]
+	Invece che prendere in input una stringa dell'utente, prendere in input il nome di un file di testo \textit{plain-text}, in altre parole un file \texttt{.txt}. È possibile trovare online interi testi in formato \texttt{.txt}, come ad esempio \href{http://rosada.yolasite.com/resources/i_promessi%20spo unsi.txt}{I Promessi Sposi}, oppure anche \href{https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjEuuHktontAhWQa8AKHdv_D3AQFjAAegQIBBAC&url=http%3A%2F%2Fwww.hoepliscuola.it%2Fdownload%2F2842%2Fla-divina-commedia-txt.aspx&usg=AOvVaw2-ivHQ7MdppenKh_hOjUeB}{La Divina Commedia}. La manipolazione di file in C++ usa lo stesso paradigma di uso della console. Trovate \href{http://www.cplusplus.com/reference/istream/istream/get/}{qui} quello che vi serve specificatamente per risolvere questo esercizio, in particolare basatevi sull'esempio.
+\end{warn}
+
+\subsection{}
+SUP che simula il comportamento di due dadi. I dadi possono avere numero di facce variabile, ma per verificare la correttezza del programma cominciare con dadi a sei facce. Il programma 'tira' i due dadi usando la funzione \texttt{rand}, opportunamente inizializzata. La somma dei valori di ogni lancio è salvata in array. Il programma deve lanciare i dadi decine di migliaia di volte, numero specificato dall'utente, e stampare la probabilità di ogni valore sotto forma di tabella. Verificare che somma 7 è la più probabile con probabilità di un sesto, essendo che ci sono 6 lanci diversi che restituiscono somma 7. Indagare poi con dadi aventi numero di facce diverse da sei.
+\begin{info} 
+	Il programma può simulare qualsiasi tipo di dado, ma in realtà solo alcuni poligono possono richiudersi in un solido. \href{https://en.wikipedia.org/wiki/Dice#Variants}{Qua} una lista dei possibili dadi, dai più classici ai più esoterici.
+\end{info}
+
+
+
+\section*{Esercizi \texttt{CodeStepByStep}}
+\begin{itemize}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/algorithms/isPermutation}{isPermutation}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/algorithms/longestUniqueString}{longestUniqueString}
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/algorithms/compressString}{compressString}
+\end{itemize}
+
+
+
+
+\end{document}
