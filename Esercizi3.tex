@@ -53,12 +53,19 @@ SUP che prende una stringa del tipo \texttt{"923D"} ed estrae il numero, convert
 SUP che prende una stringa dall'utente che può essere anche una frase, comprensiva quindi di spazi e punteggiatura. Il programma ristampa la stessa stringa al contrario.  
 
 \subsection{}
-Localizzare in una stringa tutte le occorrenze di un determinato carattere usando la funzione di libreria \texttt{strchr}. Le stringhe in ingresso sono composte di sole lettere minuscole e spazi. Il programma stampa la stessa stringa in ingresso con le occorrenze trovate convertite a lettere maiuscole (cercare funzione di libreria per fare ciò). Stampa inoltre un conteggio delle occorrenze.
+Localizzare in una stringa tutte le occorrenze di un determinato carattere. Le stringhe in ingresso sono composte di sole lettere minuscole e spazi. Il programma stampa la stessa stringa in ingresso con le occorrenze trovate convertite a lettere maiuscole. Stampa inoltre un conteggio delle occorrenze.
+
+\begin{info}
+	Ci sono diverse funzioni di libreria che possono essere utili in questo esercizio. Consultare \href{www.cplusplus.com/reference/cstring/}{l'elenco} completo e scegliere quella ritenuta più adatta.
+\end{info}
 
 \subsection{}
-SUP che usa l'abilità acquisita nell'esercizio precedente di fare \textit{parsing} di stringa e svolge una funzionalità programmabile. Il programma prende in input una stringa di valori di temperatura del tipo \texttt{"20C@34F@12F@23C"} e converte questi in gradi Kelvin. 
+SUP esegue \textit{parsing} di stringa e svolge una funzionalità programmabile. Nello specifico il programma prende in input una stringa di valori di temperatura del tipo \texttt{"20C@34F@12F@23C"} e converte questi in gradi Kelvin. Stampare due tabelle distinte per conversioni Celsius e Fahrenheit.
+\begin{info}
+	Come nell'esercizio precedente, diverse funzioni di libreria possono aiutare a dividere la stringa in più parti. In questo la scelta più adatta è \texttt{strtok}.
+\end{info}
 
-% Stampare due tabelle distinte per conversioni Celsius e Fahrenheit.
+\clearpage
 
 \subsection{}
 SUP che data una stringa in input calcola le occorrenze di ogni carattere. Risolvere il problema usando un unico array per contare le occorrenze. Stampare il risultato in tabella, con possibili interessanti statistiche a vostra discrezione. Considerare solo lettere dell'alfabeto, maiuscole e minuscole fanno parte dello stesso conteggio. Scartare tutto ciò che non è una lettera, per semplicità si scartano anche i caratteri della tabella ASCII estesa come le lettere accentate.
