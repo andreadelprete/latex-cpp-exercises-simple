@@ -29,7 +29,7 @@
 
 \title{Esercizi Blocco 3} % Title of the assignment
 
-\author{Luca Oliveri\\ \texttt{luca.olivieri-1@unitn.it}} % Author name and email address
+\author{Luca Oliveri\\ \texttt{olivieri.luca@outlook.com}} % Author name and email address
 
 \date{Università di Trento --- \today} % University, school and/or department name(s) and a date
 
@@ -56,7 +56,7 @@ SUP che prende una stringa dall'utente che può essere anche una frase, comprens
 Localizzare in una stringa tutte le occorrenze di un determinato carattere. Le stringhe in ingresso sono composte di sole lettere minuscole e spazi. Il programma stampa la stessa stringa in ingresso con le occorrenze trovate convertite a lettere maiuscole. Stampa inoltre un conteggio delle occorrenze.
 
 \begin{info}
-	Ci sono diverse funzioni di libreria che possono essere utili in questo esercizio. Consultare \href{www.cplusplus.com/reference/cstring/}{l'elenco} completo e scegliere quella ritenuta più adatta.
+	Ci sono diverse funzioni di libreria che possono essere utili in questo esercizio. Consultare \href{http://www.cplusplus.com/reference/string/string/}{l'elenco} completo e scegliere quella ritenuta più adatta.
 \end{info}
 
 \subsection{}
@@ -73,7 +73,7 @@ SUP che data una stringa in input calcola le occorrenze di ogni carattere. Risol
 	Tenere a mente come sono rappresentate le lettere nella tabella ASCII. È possibile indicizzare l'array dove incrementiamo mano a mano il conteggio usando direttamente la lettera sotto esame e applicando un offset. Ad esempio la lettera D, quarta nell'alfabeto quindi avente indice 3, ha valore ASCII 44, oppure anche 64 nel nostro caso. Sottraendo un offset di 41 o di 61 rispettivamente, troviamo il nostro indice di valore 3.
 \end{info}
 \begin{warn} [Estensione avanzata:]
-	Invece che prendere in input una stringa dell'utente, prendere in input il nome di un file di testo \textit{plain-text}, in altre parole un file \texttt{.txt}. È possibile trovare online interi testi in formato \texttt{.txt}, come ad esempio \href{http://rosada.yolasite.com/resources/i_promessi%20spo unsi.txt}{I Promessi Sposi}, oppure anche \href{https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjEuuHktontAhWQa8AKHdv_D3AQFjAAegQIBBAC&url=http%3A%2F%2Fwww.hoepliscuola.it%2Fdownload%2F2842%2Fla-divina-commedia-txt.aspx&usg=AOvVaw2-ivHQ7MdppenKh_hOjUeB}{La Divina Commedia}. La manipolazione di file in C++ usa lo stesso paradigma di uso della console. Trovate \href{http://www.cplusplus.com/reference/istream/istream/get/}{qui} quello che vi serve specificatamente per risolvere questo esercizio, in particolare basatevi sull'esempio.
+	Invece che prendere in input una stringa dell'utente, prendere in input il nome di un file di testo \textit{plain-text}, in altre parole un file \texttt{.txt}. È possibile trovare online interi testi in formato \texttt{.txt}, come ad esempio \href{http://rosada.yolasite.com/resources/i_promessi\%20sposi.txt}{I Promessi Sposi}, oppure anche \href{https://raw.githubusercontent.com/dlang/druntime/master/benchmark/extra-files/dante.txt}{La Divina Commedia}. La manipolazione di file in C++ usa lo stesso paradigma di uso della console. Trovate \href{http://www.cplusplus.com/reference/istream/istream/get/}{qui} quello che vi serve specificatamente per risolvere questo esercizio, in particolare basatevi sull'esempio.
 \end{warn}
 
 \subsection{}
