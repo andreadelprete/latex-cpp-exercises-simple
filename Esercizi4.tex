@@ -27,7 +27,7 @@
 %	ASSIGNMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{Esercizi Blocco 3} % Title of the assignment
+\title{Esercizi Blocco 4} % Title of the assignment
 
 \author{Luca Oliveri\\ \texttt{luca.olivieri-1@unitn.it}} % Author name and email address
 
@@ -40,20 +40,150 @@
 \maketitle % Print the title
 
 \section*{Introduzione} % Unnumbered section
+Questi esercizi vogliono spingere sui limiti di quanto avete imparato. Preparazione definitiva per l'esame.
 
 \setcounter{section}{4}
+
+\subsection{}
+SUP che dato un numero, controlla i numeri da zero al numero inserito comunicando all'utente l'appartenenze alle seguenti classificazioni numeriche, usando funzioni:
+\begin{itemize}
+	\item \href{https://en.wikipedia.org/wiki/Abundant_number}{Numeri Abbondanti}: numeri più piccoli della somma dei loro divisori propri. 
+	
+	\textit{Esempio: 12 essendo 1+2+3+4+6 = 16.}
+	\item \href{https://en.wikipedia.org/wiki/Deficient_number}{Numeri Difettivi}: numeri più piccoli della somma dei divisori propri. 
+	
+	\textit{Esempio: 21 essendo 1+3+7 = 11. }
+	\item \href{https://en.wikipedia.org/wiki/Primitive_abundant_number}{Numeri Abbondanti Primitivi}: numeri Abbondanti i cui divisori propri sono tutti numeri Difettivi.
+	\item \href{https://en.wikipedia.org/wiki/Semiperfect_number}{Numeri Semiperfetti}: numeri uguali alla somma di \textit{alcuni} dei suoi divisori propri.
+	\item \href{https://en.wikipedia.org/wiki/Weird_number}{Numeri Bizzarri}: numeri Semiperfetti che non sono abbondanti. 
+\end{itemize}
+
+\begin{info}
+	Parlando di \textit{divisori propri} si vuole indicare tutti i divisori eccetto il numero stesso. È più facile confrontare la correttezza delle serie prodotte se i risultati vengono raggruppati per gruppo di appartenenza. Quindi prima tutti i numeri Abbondanti, poi Difettivi, eccetera.
+\end{info}
+
+\subsection{}
+SUP che prende da riga di comando una frase e chiama funzioni che svolgono le seguenti operazioni, stampando per ognuna il risultato:
+\begin{itemize}
+	\item Trova la lunghezza della stringa senza usare funzioni di libreria
+	\item Crea una nuova stringa che contiene tutti i caratteri della stringa originale, ma separati da un carattere a scelta dell'utente. \textit{Esempio: "ciao" '@' diventa "c@i@a@o"}
+	\item Restituisce una nuova stringa che l'invertita rispetto all'originale.
+	\item Conta il numero di parole.
+	\item Conta il numero di lettere, numero di cifre e numero di segni di punteggiatura nella frase. La funzione deve restituire \texttt{void}.
+	\item Funzione che trova il carattere con più occorrenze e comunica al chiamante il carattere in questione e il numero di occorrenze. 
+\end{itemize}
+
 
 
 %------------------------------------------------
 
+%\subsection{}
+%Dato in ingresso da riga di comando un array, stamparlo in ordine inverso.
+%
+%\subsection{}
+%Dati due valori interi \texttt{x} ed \texttt{y} da riga di comando, stampare a video una versione processata del seguente array: \texttt{\{3, 9, 1, 2, 10, 8, 4, 5, 2, 3, 7, 4, 6, 5, 9, 8\}} 
+%
+%Sostituire tutte le istanze di \texttt{x} con il valore \texttt{y}. Se ad esempio \texttt{x==3} ed \texttt{y=-1}, il programma dovrebbe stampare: \texttt{>> -1, 9, 1, 2, 10, 8, 4, 5, 2, -1, 7, 4, 6, 5, 9, 8}.
+%
+%\subsection{}
+%Dati in ingresso da riga di comando: 
+%\begin{itemize}
+%	\item 	un valore intero \texttt{x}
+%	\item	una lista di valori interi \texttt{a}	
+%\end{itemize}
+%Verificare se il valore \texttt{x} è contenuto nella lista \texttt{a}. In caso affermativo stampare \texttt{true}, altrimenti stampare \texttt{false}.
+%
+%\subsection{}
+%Dato in ingresso da riga di comando un intero positivo \texttt{i}, stampare in uscita l'\texttt{i}-esimo valore della sequenza di Fibonacci. Nella sequenza di Fibonacci i primi due elementi sono uguali ad 1, mentre ogni elemento successivo è dato dalla somma dei due elementi che lo precedono, ovvero:
+%\texttt{1, 1, 2, 3, 5, 8, 13, ...}
+
+%------------------------------------------------
+
 \subsection{}
+Realizzare una libreria di funzioni in grado di gestire un array di strutture a lunghezza variabile.
+
+Un array di puntatori a \texttt{struct} fornisce lo scheletro sul quale vengono mano a mano allocate le strutture. Se l'array allocato inizialmente si rivela insufficientemente lungo per contenere tutte le strutture di cui ha bisogno l'utente, la libreria alloca un nuovo array più capiente, copia i riferimenti delle strutture presenti in quello vecchio e lo distrugge a copia ultimata. Tutta questa operazione deve essere completamente trasparente all'utilizzatore, che semplicemente chiederà di aggiungere nuovi elementi. 
+
+L'unità di memorizzazione è una \texttt{struct} definita in un file header (\texttt{.h}) a sé stante. Sia il programma che la libreria andranno a riferirsi a questo file per avere un riferimento della struttura usata. In questo modo la libreria di funzioni rimane adattabile a diverse strutture, definibili riscrivendo il file di header a seconda della necessità. Per testare la libreria si consiglia di usare una struttura contenente un singolo \texttt{int}.
+
+A seguire una bozza delle firme dei metodi da implementare ed un esempio di uso della libreria. Abbreviamo \texttt{VariableArray} con \texttt{VA}. \texttt{theStruct} è la struttura definita nel file header separato.
+\begin{itemize}
+	\item \texttt{theStruct ** initVA(int numStartingElements)} $\rightarrow$ Funzione di partenza per utilizzare la libreria. Inizializza l'array usato per le successive chiamate. 
+	\item \texttt{theStruct ** addElementToVA(theStruct ** VA, theStruct * elementToAdd)} $\rightarrow$ Dato l'array di puntatori e la nuova struttura da aggiungere, aggiungi questa alla prima posizione libera nell'array.  Se \texttt{VA} ha finito le posizioni disponibili, allora si occupa di allocarne uno nuovo e copiarvi tutti i riferimenti. Ricordarsi di deallocare quello vecchio. La funzione restituisce l'array, ricevuto in input o allocato nuovo a seconda di come si sono evolute le cose. 
+	\item \texttt{destroyVA(theStruct ** VA)} $\rightarrow$ Dealloca tutto, sia le strutture che l'array di puntatori.
+\end{itemize}
+
+% File contents
+\begin{file}[main.cpp]
+	\begin{lstlisting}[language=C++]
+// theStruct is a struct 
+// containing an integer called 'num'
+
+theStruct ** VA = initVA(10);
+
+// Adding elements to the VA
+theStruct * s = new theStruct;
+s->num = 45; // Or use rand in a for loop
+VA = addToVA(VA, s);
+// Repeat N times with N > 10 to test
+
+for(int i = 0; i < N; i++) {
+	cout << VA[i]->num << endl;
+}	
+
+destroyVA(VA);
+
+	\end{lstlisting}
+\end{file}
+
+
+\subsection{}
+Contare le occorrenze delle parole in un testo, dove per parola si intende un insieme di caratteri delimitato da spazi. Quindi ad esempio in "\textit{se non l'amore può salvarci}" consideriamo "\textit{l'amore}" come parola unica.
+
+\begin{info}
+Basare il programma attorno ad una \texttt{struct} che al suo interno memorizzi una parola e un variabile di conteggio. Usare la libreria sviluppata all'esercizio precedente e stampare un elenco con le N parole più utilizzate nel testo. Analizzare testi lunghi usando l'apertura file vista in laboratorio.
+\end{info}
+
+\clearpage
+
+\subsection{}
+Libreria di funzioni che modelli matrici usando le \texttt{struct}. La libreria dovrebbe fornire funzioni per creare e distruggere matrici, oltre che implementare funzioni per le operazioni di addizione, sottrazione e trasposizione. Fare dovuti controlli dimensionali per verificare che le operazioni tra le matrici coinvolte possano essere effettivamente svolte. Per i più temerari c'è la sfida del calcolo del determinante e decine di altre operazioni matriciali. 
+
+\begin{info}
+	Si consiglia che la struttura usi un array \textbf{monodimensionale} per contenere i valori della matrice e due interi che contengano i numeri di righe e colonne. È possibile usare anche un array bidimensionale, ma mentre può suonare più intuitivo, non è la soluzione tipicamente usata in librerie di algebra lineare. 
+\end{info}
+
+
+\subsection{}
+Interpolazione lineare. Per \textit{traiettoria} si intende l'evoluzione di una variabile nel tempo. Ad esempio la variabile può essere la posizione di una particella in un problema di fisica. 
+
+In generale le traiettorie sono composte da infiniti punti, quindi per poterle rappresentare è necessario discretizzarle. Il modo più semplice di discretizzare è rappresentare la traiettoria in punti equidistanziati nel tempo, quindi una volta stabilito un intervallo di tempo costante, possiamo descrivere la posizione della nostra particella (caso monodimensionale) di esempio con un array di numeri interi: \texttt{\{3, 9, 1, -2, -10, -8, -4, -5, 2, 3, 7, -4, -6, 5, 9, 8\}}. Usiamo questo array come riferimento per il nostro problema e ipotizziamo una discretizzazione con intervallo di $1s$, quindi essendo che il nostro array ha 16 elementi, conosciamo la traiettoria tra gli istanti di tempo 0 e 16. 
+
+Il programma ricostruisce la traiettoria partendo dai punti a nostra conoscenza e unendoli con delle rette. Possiamo quindi adesso avere una stima della traiettoria in qualsiasi punto tra 0 e 16. Il programma stampa il valori della traiettoria tra 0 e 16 a intervalli di $0.1s$. La stampa è divisa in due colonne, a sinistra il tempo e a destra il valore calcolato per quell'istante.  
+
+
+\begin{info}
+	Per risolvere il problema il programma deve innanzitutto essere in grado di ricavare l'equazione di una retta dati due punti. Valutare poi il valore l'equazione nei punti desiderati.
+	
+	Possiamo creare un grafico che traccia l'evoluzione della posizione della particella nel tempo, sulle $x$ abbiamo il tempo e sulle $y$ abbiamo i valori dell'array. \href{https://en.wikipedia.org/wiki/Linear_interpolation#/media/File:Interpolation_example_linear.svg}{Qua un esempio} di grafico con interpolazione lineare. Per verificare la correttezza dell'algoritmo scritto, incollare il risultato del programma in un foglio di calcolo e aggiungere al grafico, con un colore diverso, i punti calcolati. Dovreste ottenere una situazione come quella nella foto del link. Può essere comodo scrivere il risultato su un file anziché in console.
+	
+	Volendo fare una considerazione di carattere generale, l'interpolazione lineare è il modello di interpolazione più semplice. La derivata prima è discontinua e questo può essere un problema in molte applicazioni. Un modello più sofisticato è l'interpolazione polinomiale, ma la sua implementazione è complessa, richiedendo l'uso di una libreria per gestire l'algebra lineare. \href{https://en.wikipedia.org/wiki/Polynomial_interpolation#/media/File:Interpolation_example_polynomial.svg}{Qua un esempio di grafico.} 
+\end{info}
+
+
+
+
 
 
 
 
 \section*{Esercizi \texttt{CodeStepByStep}}
 \begin{itemize}
-	\item \href{https://www.codestepbystep.com/problem/view/cpp/algorithms/sumCubes}{\texttt{sumCubes}}. 
+	\item \href{https://www.codestepbystep.com/problem/view/cpp/algorithms/sumCubes}{\texttt{sumCubes}}
+	\item \href{https://codestepbystep.com/problem/view/cpp/recursion/sumOfSquares}{\texttt{sumOfSquares}}
+	\item \href{https://codestepbystep.com/problem/view/cpp/recursion/moveToEnd}{\texttt{moveToEnd}}
+	\item \href{https://codestepbystep.com/problem/view/cpp/recursion/printBinary}{\texttt{printBinary}}
+	\item \href{https://codestepbystep.com/problem/view/cpp/strings/sameDashes}{\texttt{sameDashes}}
 \end{itemize}
 
 
