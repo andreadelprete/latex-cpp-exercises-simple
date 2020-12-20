@@ -1,5 +1,5 @@
 #include "projectile.hpp"
-#define _USE_MATH_DEFINES
+#define _USE_MATH_DEFINES // To unlock math constants
 #include <cmath>
 #include <iostream>
 
@@ -14,7 +14,7 @@ void projectileSimulation(float v0, float a0, float stepSize, int steps)
 
     cout << "step\tx\ty\ttime" << endl
          << "----------------------------" << endl
-         << "0\t0.00\t0.00\t0.00"<< endl;
+         << "0\t0.00\t0.00\t0.00" << endl;
 
     cout.precision(2); // Two decimal places
 

@@ -7,8 +7,8 @@
     Here is an example output log from your program:
 */
 
-#include <iostream>
 #include "projectile.hpp"
+#include <iostream>
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int main()
 {
     float v0, a0, stepSize;
     int steps;
-    
+
     cout << "Velocity  (m/s): ";
     cin >> v0;
     cout << "Angle (degrees): ";
@@ -28,6 +28,5 @@ int main()
 
     projectileSimulation(v0, a0, stepSize, steps);
 
-    return 0;    
+    return 0;
 }
-

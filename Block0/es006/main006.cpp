@@ -5,7 +5,7 @@
     tra cui scriversela a mano. Fare i calcoli direttamente
     nei comandi di cout.
 */
-
+#define _USE_MATH_DEFINES // To unlock math constants
 #include <cmath>
 #include <iostream>
 
