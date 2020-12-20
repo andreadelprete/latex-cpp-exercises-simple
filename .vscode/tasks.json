@@ -19,7 +19,6 @@
                 "-Wlogical-op",
                 "-Wmissing-include-dirs",
                 "-Wnoexcept",
-                "-Wold-style-cast",
                 "-Woverloaded-virtual",
                 "-Wredundant-decls",
                 "-Wshadow",
