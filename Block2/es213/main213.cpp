@@ -16,8 +16,8 @@ using namespace std;
 
 int main()
 {
-    // srand (time(NULL));
-    srand(42);
+    // srand (time(NULL)); // Uncomment for true randomness
+    srand(42); // Commenting this out
     int toBeSorted[LEN];
     for (int i = 0; i < LEN; i++) {
         toBeSorted[i] = rand() % MAX_RAND;

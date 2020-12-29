@@ -53,14 +53,14 @@ SUP che prende una stringa del tipo \texttt{"923D"} ed estrae il numero, convert
 SUP che prende una stringa dall'utente che può essere anche una frase, comprensiva quindi di spazi e punteggiatura. Il programma ristampa la stessa stringa al contrario.  
 
 \subsection{}
-Localizzare in una stringa tutte le occorrenze di un determinato carattere. Le stringhe in ingresso sono composte di sole lettere minuscole e spazi. Il programma stampa la stessa stringa in ingresso con le occorrenze trovate convertite a lettere maiuscole. Stampa inoltre un conteggio delle occorrenze.
+Dati in ingresso una stringa ed un carattere, il programma stampa la stessa stringa con le occorrenze trovate convertite a lettere maiuscole. Stampa inoltre un conteggio delle occorrenze.
 
 \begin{info}
 	Ci sono diverse funzioni di libreria che possono essere utili in questo esercizio. Consultare \href{http://www.cplusplus.com/reference/string/string/}{l'elenco} completo e scegliere quella ritenuta più adatta.
 \end{info}
 
 \subsection{}
-SUP esegue \textit{parsing} di stringa e svolge una funzionalità programmabile. Nello specifico il programma prende in input una stringa di valori di temperatura del tipo \texttt{"20C@34F@12F@23C"} e converte questi in gradi Kelvin. Stampare due tabelle distinte per conversioni Celsius e Fahrenheit.
+SUP esegue \textit{parsing} di stringa e svolge una funzionalità programmabile. Nello specifico il programma prende in input una stringa di valori di temperatura del tipo \texttt{"20C@34F@12F@23C"} e converte questi in gradi Kelvin. Stampare due tabelle distinte per conversioni Celsius e Fahrenheit. La stringa da elaborare può essere scritta direttamente nel codice o passata come argomento da riga di comando.
 \begin{info}
 	Come nell'esercizio precedente, diverse funzioni di libreria possono aiutare a dividere la stringa in più parti. In questo la scelta più adatta è \texttt{strtok}.
 \end{info}
@@ -77,7 +77,7 @@ SUP che data una stringa in input calcola le occorrenze di ogni carattere. Risol
 \end{warn}
 
 \subsection{}
-SUP che simula il comportamento di due dadi. I dadi possono avere numero di facce variabile, ma per verificare la correttezza del programma cominciare con dadi a sei facce. Il programma 'tira' i due dadi usando la funzione \texttt{rand}, opportunamente inizializzata. La somma dei valori di ogni lancio è salvata in array. Il programma deve lanciare i dadi decine di migliaia di volte, numero specificato dall'utente, e stampare la probabilità di ogni valore sotto forma di tabella. Verificare che somma 7 è la più probabile con probabilità di un sesto, essendo che ci sono 6 lanci diversi che restituiscono somma 7. Indagare poi con dadi aventi numero di facce diverse da sei.
+SUP che simula il comportamento di due dadi. I dadi possono avere numero di facce variabile, ma per verificare la correttezza del programma cominciare con dadi a sei facce. Il programma 'tira' i due dadi usando la funzione \texttt{rand}, opportunamente inizializzata. La somma dei valori di ogni lancio è salvata in un array. Il programma deve lanciare i dadi decine di migliaia di volte e stampare la probabilità di ogni valore sotto forma di tabella. Verificare che somma 7 è la più probabile con probabilità di un sesto, essendo che ci sono 6 lanci diversi che restituiscono somma 7. Verificare anche come aumentando il numero di lanci le probabilità tendano essere simmetriche rispetto al valore centrale, descrivendo una curva gaussiana. Indagare poi con dadi aventi numero di facce diverse da sei. Sia il numero di facce e il numero di lanci sono inseriti dall'utente all'avvio del programma.
 \begin{info} 
 	Il programma può simulare qualsiasi tipo di dado, ma in realtà solo alcuni poligono possono richiudersi in un solido. \href{https://en.wikipedia.org/wiki/Dice#Variants}{Qua} una lista dei possibili dadi, dai più classici ai più esoterici.
 \end{info}

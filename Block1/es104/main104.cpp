@@ -16,11 +16,11 @@ int main()
     int stop = 0;
     int lineEnd = 0;
 
-    while(stop < STOP) {
+    while (stop < STOP) {
         cout << (n *= 2) << "\t";
 
         // Periodically print a new line
-        if(lineEnd > LINEEND) {
+        if (lineEnd > LINEEND) {
             cout << endl;
             lineEnd = 0;
         }

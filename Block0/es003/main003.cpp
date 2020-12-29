@@ -33,7 +33,7 @@ int main()
     cout << "4" << endl
          << endl;
 
-    // Exstension
+    // Extension
     int limit;
     cout << "Insert limit of number printing: ";
     cin >> limit;
