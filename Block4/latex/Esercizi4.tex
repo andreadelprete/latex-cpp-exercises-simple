@@ -45,17 +45,19 @@ Questi esercizi vogliono spingere sui limiti di quanto avete imparato. Preparazi
 \setcounter{section}{4}
 
 \subsection{}
-SUP che dato un numero, controlla i numeri da zero al numero inserito comunicando all'utente l'appartenenze alle seguenti classificazioni numeriche, usando funzioni:
+SUP che chiede all'utente di specificare un intervallo per il quale calcolare le seguenti classificazioni numeriche. Le verifiche di appartenenza devono essere svolte in funzioni. Per ogni gruppo sono indicati gli identificativi di serie numeriche OEIS.
 \begin{itemize}
-	\item \href{https://en.wikipedia.org/wiki/Abundant_number}{Numeri Abbondanti}: numeri più piccoli della somma dei loro divisori propri. 
+	\item \href{https://en.wikipedia.org/wiki/Abundant_number}{Numeri Abbondanti}: numeri più piccoli della somma dei divisori propri. \href{https://oeis.org/A005101}{\texttt{A005101}.}
 	
 	\textit{Esempio: 12 essendo 1+2+3+4+6 = 16.}
-	\item \href{https://en.wikipedia.org/wiki/Deficient_number}{Numeri Difettivi}: numeri più piccoli della somma dei divisori propri. 
+	\item \href{https://en.wikipedia.org/wiki/Deficient_number}{Numeri Difettivi}: numeri più grandi della somma dei divisori propri. \href{https://oeis.org/A005100}{\texttt{A005100}.}
 	
 	\textit{Esempio: 21 essendo 1+3+7 = 11. }
-	\item \href{https://en.wikipedia.org/wiki/Primitive_abundant_number}{Numeri Abbondanti Primitivi}: numeri Abbondanti i cui divisori propri sono tutti numeri Difettivi.
+	\item \href{https://en.wikipedia.org/wiki/Primitive_abundant_number}{Numeri Abbondanti Primitivi}: numeri Abbondanti i cui divisori propri sono tutti numeri Difettivi. \href{https://oeis.org/A071395}{\texttt{A071395}.}
 	\item \href{https://en.wikipedia.org/wiki/Semiperfect_number}{Numeri Semiperfetti}: numeri uguali alla somma di \textit{alcuni} dei suoi divisori propri.
+	\href{https://oeis.org/A005835}{\texttt{A005835}.}
 	\item \href{https://en.wikipedia.org/wiki/Weird_number}{Numeri Bizzarri}: numeri Semiperfetti che non sono abbondanti. 
+	\href{https://oeis.org/A006037}{\texttt{A006037}.}
 \end{itemize}
 
 \begin{info}
@@ -63,13 +65,13 @@ SUP che dato un numero, controlla i numeri da zero al numero inserito comunicand
 \end{info}
 
 \subsection{}
-SUP che prende da riga di comando una frase e chiama funzioni che svolgono le seguenti operazioni, stampando per ognuna il risultato:
+SUP che prende da riga di comando una frase e chiama funzioni che svolgono le seguenti operazioni, stampando per ognuna il risultato. Tutte le funzioni devono restituire \texttt{void}.
 \begin{itemize}
 	\item Trova la lunghezza della stringa senza usare funzioni di libreria
 	\item Crea una nuova stringa che contiene tutti i caratteri della stringa originale, ma separati da un carattere a scelta dell'utente. \textit{Esempio: "ciao" '@' diventa "c@i@a@o"}
 	\item Restituisce una nuova stringa che l'invertita rispetto all'originale.
-	\item Conta il numero di parole.
-	\item Conta il numero di lettere, numero di cifre e numero di segni di punteggiatura nella frase. La funzione deve restituire \texttt{void}.
+	\item Conta il numero di parole, intese come delimitate da spazi, anche multipli e ad inizio stringa.
+	\item Conta il numero di cifre e numero di segni di punteggiatura nella frase. 
 	\item Funzione che trova il carattere con più occorrenze e comunica al chiamante il carattere in questione e il numero di occorrenze. 
 \end{itemize}
 
@@ -138,7 +140,7 @@ destroyVA(VA);
 
 
 \subsection{}
-Contare le occorrenze delle parole in un testo, dove per parola si intende un insieme di caratteri delimitato da spazi. Quindi ad esempio in "\textit{se non l'amore può salvarci}" consideriamo "\textit{l'amore}" come parola unica.
+Contare le occorrenze delle parole in un testo, dove per parola si intende un insieme di caratteri delimitato da spazi o da apostrofi. Quindi ad esempio in "\textit{se non l'amore può salvarci}" consideriamo "\textit{l}" e "\textit{amore}" come due parole distinte. Rimuovere poi tutti i segni di punteggiatura e rendere tutte lettere minuscole prima di conteggiare la parola, vedi Es 2.3. È possibile che con quest'ultima operazione si creino artefatti per le lettere accentate.
 
 \begin{info}
 Basare il programma attorno ad una \texttt{struct} che al suo interno memorizzi una parola e un variabile di conteggio. Usare la libreria sviluppata all'esercizio precedente e stampare un elenco con le N parole più utilizzate nel testo. Analizzare testi lunghi usando l'apertura file vista in laboratorio.
@@ -147,10 +149,10 @@ Basare il programma attorno ad una \texttt{struct} che al suo interno memorizzi 
 \clearpage
 
 \subsection{}
-Libreria di funzioni che modelli matrici usando le \texttt{struct}. La libreria dovrebbe fornire funzioni per creare e distruggere matrici, oltre che implementare funzioni per le operazioni di addizione, sottrazione e trasposizione. Fare dovuti controlli dimensionali per verificare che le operazioni tra le matrici coinvolte possano essere effettivamente svolte. Per i più temerari c'è la sfida del calcolo del determinante e decine di altre operazioni matriciali. 
+Libreria di funzioni che modelli matrici usando le \texttt{struct}. La libreria dovrebbe fornire funzioni per creare e distruggere matrici, oltre che implementare funzioni per le operazioni di addizione, sottrazione, moltiplicazione e trasposizione. Fare dovuti controlli dimensionali per verificare che le operazioni tra le matrici coinvolte possano essere effettivamente svolte. Per i più temerari c'è la sfida del calcolo del determinante e decine di altre operazioni matriciali. 
 
 \begin{info}
-	Si consiglia che la struttura usi un array \textbf{monodimensionale} per contenere i valori della matrice e due interi che contengano i numeri di righe e colonne. È possibile usare anche un array bidimensionale, ma mentre può suonare più intuitivo, non è la soluzione tipicamente usata in librerie di algebra lineare. 
+	Si consiglia che la struttura usi un array \textbf{monodimensionale} per contenere i valori della matrice e due interi che contengano i numeri di righe e colonne. È possibile usare anche un array bidimensionale, ma seppur può sembrare più intuitivo, non è la soluzione tipicamente usata in librerie di algebra lineare. 
 \end{info}
 
 
