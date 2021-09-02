@@ -29,9 +29,9 @@
 
 \title{Esercizi Blocco 2} % Title of the assignment
 
-\author{Luca Oliveri\\ \texttt{olivieri.luca@outlook.com}} % Author name and email address
+\author{Luca Oliveri \& Andrea Del Prete\\ \texttt{olivieri.luca@outlook.com}, \texttt{andrea.delprete@unitn.it}} % Author name and email address
 
-\date{UniversitÃ  di Trento --- \today} % University, school and/or department name(s) and a date
+\date{Università  di Trento --- \today} % University, school and/or department name(s) and a date
 
 %----------------------------------------------------------------------------------------
 
@@ -40,73 +40,76 @@
 \maketitle % Print the title
 
 \section*{Introduzione} % Unnumbered section
-Molti di questi esercizi richiedono aver affrontato l'argomento array, ma non per forza tutti. Quando si chiede di estendere le funzionalitÃ  di un altro programma si consiglia di non modificare quello vecchio, ma di iniziarne uno nuovo. Tenere a mente che abbiamo fatto le funzioni, quindi usarle quando ci sembra appropriato.
+Molti di questi esercizi (ma non tutti) richiedono aver affrontato l'argomento array. Quando si chiede di estendere le funzionalità di un altro programma si consiglia di non modificare quello vecchio, ma di iniziarne uno nuovo. Si consiglia di usare le funzioni quando appropriato per rendere il codice più leggibile e modulare.
 
 \setcounter{section}{2}
 
 %------------------------------------------------
 
 \subsection{}
-SUP che legge 10 numeri dall'utente e ne calcola la somma. Fermarsi a leggere numeri quando l'utente inserisce tutti i 10 numeri oppure quando inserisce 0. A fine inserimento il programma stampa su due colonne il numero inserito e l'ultimo valore di somma.
+SUP che legge 10 numeri e ne calcola la somma. Fermare la lettura dei numeri quando l'utente ha inserito tutti i 10 numeri oppure quando inserisce 0. A fine inserimento il programma stampa su due colonne il numero inserito e l'ultimo valore di somma.
 \begin{info} 
-	Il limite massimo dipende da quanto grandi decidiamo che siano le strutture in fase di compilazione. Impareremo che Ã¨ possibile scrivere programmi che non hanno questo tipo di limite.
+	Il limite massimo dipende da quanto grandi decidiamo che siano le strutture in fase di compilazione. Impareremo che è possibile scrivere programmi che non hanno questo limite.
 \end{info}
 
 \subsection{}
-Riscrivere l'esercizio 1.3 usando gli array, con lunghezza in cifre del numero da verificare se palindromo variabile.
+Riscrivere l'esercizio 1.3 usando gli array, con lunghezza variabile delle cifre del numero da verificare se palindromo.
 
 \subsection{}
-Modificare il programma 1.3 perchÃ© l'utente possa inserire frasi anzichÃ© numeri, lunghe fino a 100 caratteri. 
+Modificare il programma 1.3 perchè l'utente possa inserire frasi anzichè numeri, lunghe fino a 100 caratteri. 
 \begin{info}
-	\href{https://www2.cs.arizona.edu/icon/oddsends/palinsen.htm}{Qua una lista} di frasi palindrome con cui fare dei test, tenendo a mente che la stessa lettera maiuscola e minuscola ha due codici ASCII diversi. Inoltre in queste frasi la punteggiatura non Ã¨ palindroma. Usare \href{http://www.cplusplus.com/reference/cctype/tolower/}{questo} e \href{http://www.cplusplus.com/reference/cctype/ispunct/}{questo} per modificare la stringa inserita dall'utente rendendo tutte le lettere minuscole e togliere la punteggiatura.
+	\href{https://www2.cs.arizona.edu/icon/oddsends/palinsen.htm}{Qui una lista} di frasi palindrome con cui fare dei test, tenendo a mente che la stessa lettera maiuscola e minuscola ha due codici ASCII diversi. Inoltre in queste frasi la punteggiatura non è palindroma. Usare \href{http://www.cplusplus.com/reference/cctype/tolower/}{questo} e \href{http://www.cplusplus.com/reference/cctype/ispunct/}{questo} per modificare la stringa inserita dall'utente rendendo tutte le lettere minuscole e togliendo la punteggiatura.
 \end{info}
 
 \subsection{}
-SUP che legge diversi numeri decimali e successivamente ristampa questi approssimati all'intero piÃ¹ vicino. Usare la funzione di libreria \texttt{round}. Stampare i numeri come interi, quindi non \texttt{42.0} ma \texttt{42}.
+SUP che legge diversi numeri decimali e successivamente li ristampa approssimati all'intero più vicino. Usare la funzione di libreria \texttt{round}. Stampare i numeri come interi, quindi, ad esempio, non stampare \texttt{42.0} ma \texttt{42}.
 
 \subsection{}
-SUP che calcola l'ipotenusa dati i due cateti. 
+SUP che calcola l'ipotenusa di un triangolo dati i due cateti. 
 
 \subsection{}
-SUP un programma che usa due funzioni di conversione della temperatura, da Celsius a Kelvin e da Fahrenheit a Kelvin. Il programma stampa una tabella ben formattata con entrambe le scale da 247 a 250 gradi Kelvin, a intervalli di 0.25 gradi.
+SUP che stampa una tabella ben formattata con le scale Fahrenheit e Celsius, da 247 a 250 gradi Kelvin, a intervalli di 0.25 gradi. 
+Il programma deve usare due funzioni di conversione della temperatura, da Kelvin a Celsius, e da Kelvin a Fahrenheit. 
 
 \subsection{}
-SUP che calcola la media dei voti di un esame. Il programma si fa dare prima il numero totale di studenti, poi i voti. Supporre un limite massimo di studenti. Approssimare il risultato all'intero piÃ¹ vicino. 
+SUP che calcola la media dei voti di un esame. Il programma legge prima il numero totale di studenti, poi i voti. Supporre un limite massimo di studenti. Approssimare il risultato all'intero più vicino. 
 
 \subsection{}
-Trovare il numero piÃ¹ grande in un array Ã¨ un problema ricorrente in programmazione. SUP che dati 10 numeri restituisce il numero piÃ¹ grande. I numeri sono inizializzati direttamente insieme alla dichiarazione dell'array. Se il numero piÃ¹ grande Ã¨ presente due volte, una occorrenza deve essere trascurata nel cercare il secondo maggiore. 
+Trovare il numero più grande in un array è un problema ricorrente in programmazione. SUP che dati 10 numeri restituisce il numero più grande. I numeri sono inizializzati direttamente insieme alla dichiarazione dell'array. 
 
 \subsection{}
-Modificare il programma precedente in modo che trovi i due numeri piÃ¹ grandi.
+Modificare il programma precedente in modo che trovi i due numeri (distinti) più grandi.
+Se il numero più grande è presente due volte, una occorrenza deve essere trascurata nel cercare il secondo maggiore. 
 
 \subsection{}
-Modificare il programma dei numeri primi cambiando il limite superiore della ricerca di divisori perfetti con la radice del numero sotto esame, anzichÃ© la sua metÃ . Confrontare l'output del nuovo algoritmo con quello vecchio. 
+Modificare il programma dei numeri primi cambiando il limite superiore della ricerca di divisori perfetti con la radice del numero sotto esame, anzichè la sua metà. Confrontare l'output del nuovo algoritmo con quello vecchio. 
 \begin{info} 
-	Provare a cercare online come si fa a temporizzare l'esecuzione di un programma e stimare il guadagno in velocitÃ  con questa modifica.
+Cercare online come si può temporizzare l'esecuzione di un programma e stimare il guadagno in velocità  con questa modifica.
 \end{info}
 
 \subsection{}
-Un intero Ã¨ detto perfetto quando la somma dei suoi fattori restituisce il numero stesso. Ad esempio 6 Ã¨ numero perfetto essendo che $1 + 2 + 3 = 6$. Scrivere una funzione che determina se un numero Ã¨ perfetto. Usarla per ricavare tutti i numeri perfetti da 1 a 10000. 
+Un intero è detto \emph{perfetto} quando la somma dei suoi fattori restituisce il numero stesso. Ad esempio 6 è un numero \emph{perfetto} essendo che $1 + 2 + 3 = 6$. 
+Scrivere una funzione che determina se un numero è \emph{perfetto}. Usarla per ricavare tutti i numeri \emph{perfetti} da 1 a 10'000. 
 \begin{info} 
-	Se siete riusciti a temporizzare il programma precedente, provate ad alzare il limite della ricerca e confrontare i tempi di calcolo con i vostri compagni.
+Se siete riusciti a temporizzare il programma precedente, provate ad alzare il limite della ricerca e confrontare i tempi di calcolo con i vostri compagni.
 \end{info}
 
 \subsection{}
-SUP che sceglie un numero a random tra 1 e 1000. Usare la \href{http://www.cplusplus.com/reference/cstdlib/rand/}{funzione} \texttt{rand} per fare questo. L'utente poi inserisce numeri fintanto che non azzecca la risposta corretta. Il programma guida l'utente rispondendo se il tentativo era maggiore o minore del numero estratto. Ãˆ una ricerca di tipo binario.
+SUP che sceglie un numero casuale tra 1 e 1000 usando la \href{http://www.cplusplus.com/reference/cstdlib/rand/}{funzione} \texttt{rand}. 
+Il programma poi legge numeri inseriti dall'utente fintanto che uno di questi è uguale al numero estratto. 
+Il programma guida l'utente nella sua ricerca indicando se l'ultimo numero inserito è maggiore o minore del numero estratto. È una ricerca di tipo binario.
 
 \subsection{}
-SUP che prende in input (oppure scritti direttamente nel codice, nell'inizializzazione dell'array) 20 numeri e ristampa l'array ordinato per ordine ascendente. Usare due cicli  innestati, dove quello piÃ¹ interno confronta due numeri adiacenti, scambiandoli se fuori ordine. Il ciclo esterno continua fintanto che durante un ciclo completo non avvengono piÃ¹ scambi, quando quindi tutti i numeri sono in ordine.
+SUP che legge 20 numeri e li ristampa ordinati in ordine ascendente. Usare due cicli innestati, dove quello più interno confronta due numeri adiacenti, scambiandoli se fuori ordine. Il ciclo esterno continua fintanto che durante un ciclo completo non avvengono più scambi, quando quindi tutti i numeri sono in ordine.
 
 \begin{warn}
-	Modificare questo esercizio quando sarete in grado di scrivere funzioni che prendono in input un array. Nel frattempo risolvete il problema nel main.
+Modificare questo esercizio quando sarete in grado di scrivere funzioni che prendono in input un array. Nel frattempo risolvete il problema nel main.
 \end{warn}
 \begin{info}
-	Riordinare un array, o \textit{sorting}, Ã¨ un problema estremamente ricorrente in programmazione. Per questo motivo Ã¨ anche motivo di ricerca e quindi esistono \href{https://en.wikipedia.org/wiki/Sorting_algorithm}{molti} algoritmi diversi. In \href{https://www.youtube.com/watch?v=kPRA0W1kECg}{questo video} una bella visualizzazione mette a confronto come  diversi algoritmi riordinano un array. L'audio Ã¨ molesto ma ha il suo fascino. Notare come la dimensione degli array Ã¨ diversa (colonnine piÃ¹ fitte) ma il tempo di esecuzione di ciascun algoritmo Ã¨ simile. Nell'esercizio andiamo ad implementare il Bubble Sort, uno dei piÃ¹ lenti ma probabilmente il piÃ¹ semplice. Un esercizio avanzato, ma interessante, Ã¨ implementare un altro algoritmo di sorting tra quelli della lista su Wikipedia e confrontare i tempi di calcolo usando array di grandi dimensioni riempiti con numeri randomici. 
+Riordinare un array, o \textit{sorting}, è un problema estremamente ricorrente in programmazione. Per questo motivo è anche un soggetto di ricerca ed esistono \href{https://en.wikipedia.org/wiki/Sorting_algorithm}{molti} algoritmi diversi. In \href{https://www.youtube.com/watch?v=kPRA0W1kECg}{questo video} una bella visualizzazione mette a confronto come diversi algoritmi riordinano un array. Notare come la dimensione degli array sia diversa (colonnine più fitte) ma il tempo di esecuzione di ciascun algoritmo è simile. Nell'esercizio andiamo ad implementare il \emph{Bubble Sort}, uno degli algoritmi più lenti, ma probabilmente il più semplice. Un esercizio avanzato, ma interessante, è di implementare un altro algoritmo di sorting tra quelli della lista su Wikipedia e confrontare i tempi di calcolo usando array di grandi dimensioni riempiti con numeri casuali. 
 \end{info}
 
 \section*{Esercizi \texttt{CodeStepByStep}}
-\href{https://www.codestepbystep.com/problem/list/cpp}{Tutti gli esercizi} della categoria \texttt{array} saranno di vostra portata solamente quando saprete come fa una funzione a prendere come parametro un array.
-
-
+\href{https://www.codestepbystep.com/problem/list/cpp}{Tutti gli esercizi} della categoria \texttt{array} saranno affrontabili solamente quando saprete come scrivere funzioni che prendono come parametro un array.
 
 \end{document}

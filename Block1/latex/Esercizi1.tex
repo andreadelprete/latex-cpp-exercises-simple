@@ -29,9 +29,8 @@
 
 \title{Esercizi Blocco 1} % Title of the assignment
 
-\author{Luca Oliveri\\ \texttt{olivieri.luca@outlook.com}} % Author name and email address
-
-\date{Universit√† di Trento --- \today} % University, school and/or department name(s) and a date
+\author{Luca Oliveri \& Andrea Del Prete\\ \texttt{olivieri.luca@outlook.com}, \texttt{andrea.delprete@unitn.it}} % Author name and email address
+\date{Universit‡† di Trento --- \today} % University, school and/or department name(s) and a date
 
 %----------------------------------------------------------------------------------------
 
@@ -44,7 +43,7 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Introduzione} % Unnumbered section
-Abbreviamo "scrivere un programma" con SUP. Questo blocco prevede l'uso di funzioni. Non √® esplicitamente indicato quali porzioni di codice sono da delegare ad una funzione.
+Abbreviamo "scrivere un programma" con SUP. Questo blocco prevede l'uso di funzioni. Non Ë esplicitamente indicato quali porzioni di codice sono da delegare ad una funzione.
 
 
 \setcounter{section}{1}
@@ -52,43 +51,41 @@ Abbreviamo "scrivere un programma" con SUP. Questo blocco prevede l'uso di funzi
 %------------------------------------------------
 
 \subsection{} 
-SUP che si fa dare due numeri interi $x$ e $y$ e calcola $x^y$. Fare due versioni, una che per il loop interno usa \texttt{for}, l'altra che usa \texttt{while}. Non usare \texttt{pow()}, questo perch√© se andate a leggere la documentazione, vedrete che prende in ingresso due \texttt{double}, significa quindi che al suo interno non compie un elevamento a potenza tra interi, ma tra numeri reali. Pur permettendoci di ottenere lo stesso risultato, questo implica che l'esecuzione sar√† ben pi√π lenta e inoltre potremmo imbatterci in errori numerici.
-
+SUP che legge due numeri interi $x$ e $y$ e calcola $x^y$. Implementare due versioni, una che per il loop interno usa \texttt{for}, l'altra che usa \texttt{while}. Non usare \texttt{pow()}, questo perchË prende in ingresso due \texttt{double}, quindi compie un elevamento a potenza tra numeri reali. Pur permettendoci di ottenere lo stesso risultato, l'esecuzione sar‡ molto pi˘ lenta e inoltre potrebbe risultare in errori numerici.
 
 \subsection{}
-SUP che dato un numero intero e un numero indice, individua la cifra alla posizione indice del primo numero inserito. Esempio: 39842, indice 2 (decine) = 4 decine. Farsi stampare solo la cifra, non serve il nome posizionale (decine, centinaia, ecc).
+SUP che dato un numero intero $x$ e un numero indice $i$, individua la cifra alla posizione $i$ del numero $x$. Esempio: $x=39842$, indice $i=2$, risultato 4.
 \begin{info} 
-	Per scomporre il numero in cifre, usare l'operatore divisione e resto con le potenze di 10. Questa √® un'operazione che capita spesso in programmazione. Svolgere prima l'esercizio precedente: si pu√≤ riutilizzare del codice.
+Per scomporre il numero in cifre, usare l'operatore divisione e resto con le potenze di 10. Questa Ë un'operazione comune in programmazione. Svolgere prima l'esercizio precedente: si puÚ riutilizzare del codice.
 \end{info}
 
 \subsection{}
-Una parola, frase o numero palindromo ha la propriet√† che pu√≤ essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo √® palindromo o meno.
+Una parola, frase o numero palindromo ha la propriet‡† che puÚ essere letto in entrambi i sensi. Per esempio i seguenti numeri da 5 cifre sono palindromi: 12321, 55555, 85658, 11611. SUP che legge un numero a 5 cifre e determina se questo Ë palindromo.
 \begin{info} 
-	Si consiglia di svolgere prima i due esercizi precedenti.
+Si consiglia di svolgere prima i due esercizi precedenti.
 \end{info}
 \begin{warn} [Estensione:]
-	Il numero in ingresso non ha lunghezza fissata a 5 ma ha lunghezza variabile. Con questa estensione diventa l'esercizio algoritmicamente pi√π complesso di questo Blocco.
+Il numero in ingresso non ha lunghezza fissa di 5, ma ha lunghezza variabile. Con questa estensione diventa l'esercizio algoritmicamente pi˘ complesso di questo Blocco.
 \end{warn}
 
 \subsection{}
-SUP che stampa senza sosta i multipli di due. Quindi 2, 4, 8, 16, eccetera. Il loop √® infinito. Cosa succede e perch√©?
+SUP che stampa senza sosta i multipli di due. Quindi 2, 4, 8, 16, eccetera. Il loop Ë infinito. Cosa succede e perchË?
 
 \subsection{}
-Il fattoriale di un numero non-negativo $n$ si scrive $n!$. Ed √® definito come segue:
+Il fattoriale di un numero non-negativo $n$ si scrive $n!$. Ed Ë definito come segue:
 $$n! = n \cdot (n - 1) \cdot (n - 2) \cdot (n - 3) \cdot \ldots \cdot 1$$
 Se $n==0$ allora $0! = 1$.
 Per esempio $$5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 120$$
-SUP che legge un numero non-negativo e calcolarne il fattoriale. Fino a che numero si ottengono risultati corretti? Controllare che l'utente inserisca un numero adeguato e in caso contrario scrivere un messaggio e terminare l'esecuzione. 
+SUP che legge un numero non-negativo e ne calcola il fattoriale. Fino a che numero si ottengono risultati corretti? Controllare che l'utente inserisca un numero adeguato e in caso contrario scrivere un messaggio e terminare l'esecuzione. 
 \begin{info} 
-	\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursion_versus_iteration}{√à dimostrato} che algoritmi scritti usando la ricorsione possono essere riscritti usando cicli iterativi classici (\texttt{while}/\texttt{for}) e viceversa. Provare a scrivere entrambe le soluzioni.
+\href{https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursion_versus_iteration}{» dimostrato} che algoritmi scritti usando la ricorsione possono essere riscritti usando cicli iterativi classici (\texttt{while}/\texttt{for}) e viceversa. Provare a scrivere entrambe le soluzioni.
 \end{info}
 
 
 \subsection{}
-SUP che prende in ingresso un intero e calcola il valore della costante di eulero $e$ con la seguente formula:
+SUP che prende in ingresso un intero e calcola il valore della costante di Eulero $e$ con la seguente formula:
 $$e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \cdots$$
-Usare il valore in ingresso per quanto a fondo esplorare la progressione. Confrontare il valore con la funzione \texttt{exp()} presente in \texttt{math.h} con argomento 1. Se avete dubbi sulle funzioni di libreria, Google √® \href{http://www.cplusplus.com/reference/cmath/exp/}{tuo} \href{https://www.geeksforgeeks.org/exp-function-cpp/}{amico}. Quante iterazioni sono necessarie per far scendere l'errore sotto ai millesimi?
-
+Usare il valore in ingresso per determinare a quale termine troncare il calcolo della progressione. Confrontare il valore con la funzione \texttt{exp()} presente in \texttt{math.h} con argomento 1. Se avete dubbi sulle funzioni di libreria, Google Ë \href{http://www.cplusplus.com/reference/cmath/exp/}{tuo} \href{https://www.geeksforgeeks.org/exp-function-cpp/}{amico}. Quanti termini sono necessari per far scendere l'errore sotto ai millesimi?
 
 \section*{Esercizi \texttt{CodeStepByStep}}
 \begin{itemize}

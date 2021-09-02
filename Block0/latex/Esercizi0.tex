@@ -7,7 +7,7 @@
 % http://www.LaTeXTemplates.com
 %
 % Authors:
-% Marion Lachaise & Fran√ßois F√©votte
+% Marion Lachaise & Fran‡ßois F‡©votte
 % Vel (vel@LaTeXTemplates.com)
 %
 % License:
@@ -29,9 +29,9 @@
 
 \title{Esercizi Blocco 0} % Title of the assignment
 
-\author{Luca Oliveri\\ \texttt{olivieri.luca@outlook.com}} % Author name and email address
+\author{Luca Oliveri \& Andrea Del Prete\\ \texttt{olivieri.luca@outlook.com}, \texttt{andrea.delprete@unitn.it}} % Author name and email address
 
-\date{Universit√† di Trento --- \today} % University, school and/or department name(s) and a date
+\date{Universit‡† di Trento --- \today} % University, school and/or department name(s) and a date
 
 %----------------------------------------------------------------------------------------
 
@@ -44,11 +44,11 @@
 %----------------------------------------------------------------------------------------
 
 \section*{Introduzione} % Unnumbered section
-Questa serie di file di esercizi verr√† pubblicata mano a meno che progrediremo nel corso. Gli esercizi non saranno n√© valutati n√© corretti. Nonostante ci√≤, sono da considerarsi chiave per preparazione all'esame.
+Questi esercizi non saranno nË valutati nË corretti. Nonostante ciÚ, sono da considerarsi chiave per preparazione all'esame.
 
 
 \begin{info} 
-	Molti degli esercizi sono proposti dal sito \href{https://www.codestepbystep.com/problem/list/cpp}{\texttt{CodeStepByStep}}. Previa registrazione, il sito propone un box dove si pu√≤ direttamente scrivere il codice e poi eseguire un test automatico della sua correttezza. Il mio consiglio √®, quando possibile, quello di sviluppare su VSCode sfruttando il sistema dei sotto-progetti, uno per esercizio. Copiare poi il codice su \texttt{CodeStepByStep} per verificarne la correttezza solo alla fine. 
+Molti degli esercizi proposti sono presi dal sito \href{https://www.codestepbystep.com/problem/list/cpp}{\texttt{CodeStepByStep}}. Previa registrazione, il sito propone un box dove si puÚ direttamente scrivere il codice e poi eseguire un test automatico. Il mio consiglio Ë, quando possibile, quello di sviluppare su VSCode sfruttando il sistema dei sotto-progetti, uno per esercizio. Copiare poi il codice su \texttt{CodeStepByStep} per verificarne la correttezza solo alla fine. 
 \end{info}
 
 
@@ -59,43 +59,48 @@ Questa serie di file di esercizi verr√† pubblicata mano a meno che progrediremo 
 \subsection{} 
 Scrivere un programma completo che chiede all'utente tre numeri interi e ne calcola il prodotto. 
 
-\begin{warn}[Occhio:]Se invece venisse chiesto di chiedere dieci numeri? Scrivere il programma in modo che sia sufficiente cambiare un valore in un solo punto per cambiare il numero di numeri in ingresso.
+\begin{warn}[Attenzione:]Se invece venisse chiesto di chiedere dieci numeri? Scrivere il programma in modo che sia sufficiente cambiare un valore in un solo punto per cambiare il numero di numeri in ingresso.
 \end{warn}
 
 
 \subsection{}
-Scrivere un programma che chide all'utente due numeri e ne calcola somma, prodotto, differenza, divisione e resto. Scrivere le operazioni direttamente nei \texttt{cout}.
+Scrivere un programma che chiede all'utente due numeri e ne calcola somma, prodotto, differenza, divisione e resto. Scrivere le operazioni direttamente nelle istruzioni di \texttt{cout}.
 
 
 \subsection{}
 Scrivere un programma che scrive i numeri da 1 a 4 sulla stessa linea. Ripetere tre volte lo stesso output utilizzando i seguenti metodi.
 \begin{itemize}
-	\item Usando una sola volta \texttt{cout} e separando gli spazi dai numeri Es: \texttt{"3"} e \texttt{" "}.
-	\item Usando una sola volta \texttt{cout} mantenendo gli spazi insieme ai numeri Es: \texttt{"3 "}.
+	\item Usando una sola volta \texttt{cout} e separando gli spazi dai numeri. Es: \texttt{"3"} e \texttt{" "}.
+	\item Usando una sola volta \texttt{cout} mantenendo gli spazi insieme ai numeri. Es: \texttt{"3 "}.
 	\item Usando quattro \texttt{cout} separati.
 \end{itemize}
 
 \begin{warn}[Estensione:]
-	L'utente inserisce un numero e vengono stampati i numeri da 1 al numero inserito. Provate a capire quale tra le prime due opzioni √® pi√π efficiente.
+L'utente inserisce un numero e vengono stampati i numeri da 1 al numero inserito. Provate a capire quale tra le prime due opzioni Ë pi˘ efficiente.
 \end{warn}
 
 \subsection{}
-Scrivere un programma che chide all'utente di inserire due interi, e poi scrive il numero pi√π grande seguito dalla string \texttt{" is larger"}. Se i due numeri sono uguali, scrivi il messaggio \texttt{" These numbers are equal"}. Innestare \texttt{if} con \texttt{else if}.
+Scrivere un programma che chiede all'utente di inserire due interi, e poi scrive il numero pi˘ grande seguito dalla string \texttt{" is larger"}. 
+Se i due numeri sono uguali, scrivere il messaggio \texttt{" These numbers are equal"}.
 
 \subsection{}
-Scrivere un programma che legge tre numeri e calcola la somma, la media, il prodotto, il pi√π grande e il pi√π piccolo. Non usare cicli.
+Scrivere un programma che legge tre numeri e calcola la somma, la media, il prodotto, il pi˘ grande e il pi˘ piccolo. Non usare cicli.
 
 \subsection{}
-Scrivere un programma che si fa inserire la lunghezza del raggio e calcola il diametro, circonferenza e area. Ci sono diversi modi nell'ottenere la costante $\pi$, tra cui scriversela a mano. Fare i calcoli direttamente nei comandi di \texttt{cout}. Il valore del raggio √® un numero reale.
+Scrivere un programma che legge la lunghezza del raggio di un cerchio e ne stampa a video diametro, circonferenza e area. 
+Ci sono diversi modi nell'ottenere la costante $\pi$, tra cui scriverla a mano. 
+Fare i calcoli direttamente nei comandi di \texttt{cout}. 
+Il valore del raggio Ë un numero reale.
 
 \subsection{}
-Scrivere un programma che prende un intero e verifica se questo √® pari o dispari e scrive qualcosa a proposito.
+Scrivere un programma che legge un intero e verifica se Ë pari o dispari e scrive qualcosa a proposito.
 
 \subsection{}
-Scrivere un programma che prende due numeri interi e determina se il primo √® un multiplo del secondo.
+Scrivere un programma che legge due numeri interi e determina se il primo Ë un multiplo del secondo.
 
 \subsection{}
-Scrivere un programma che stampa la tabella ASCII in questo formato, limitandosi alle lettere maiuscole, minuscole e le dieci cifre:
+Scrivere un programma che stampa la tabella ASCII, limitandosi alle lettere maiuscole, minuscole e le dieci cifre.
+Il formato della la tabella ASCII deve essere il seguente:
 
 \texttt{CHAR: A ASCII: 65}
 
@@ -103,11 +108,18 @@ Scrivere un programma che stampa la tabella ASCII in questo formato, limitandosi
 
 \texttt{CHAR: C ASCII: 67}
 
+\texttt{...}
+
 
 \begin{info}
-	Dato un intero \texttt{i}, il su corrispondente carattere ASCII pu√≤ essere ricavato tramite l'operatore di cast, quindi:
-	\texttt{cout {<}< (char) 65} stamper√† \texttt{A}. 
-	Inoltre ricordare che invece scrivendo \texttt{int i = 'A'} il valore di \texttt{i} sar√† 65. 
+	Dato un intero \texttt{i}, il corrispondente carattere ASCII puÚ essere ricavato tramite l'operatore di cast, quindi la seguente istruzione:
+	
+	\texttt{cout {<}< (char) 65;} \\
+	stamper‡† \texttt{A}. 
+	Per risalire al codice ASCII partendo da un char invece possiamo convertire il char in int, ad esempio:
+	
+	\texttt{int i = 'A';} \\
+	In questo caso il valore di \texttt{i} sar‡† 65.
 \end{info}
 
 
